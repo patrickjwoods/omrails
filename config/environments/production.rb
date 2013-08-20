@@ -77,4 +77,8 @@ Omrails::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+
+  # be sure to set actual host in production
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
 end
