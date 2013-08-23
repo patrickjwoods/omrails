@@ -1,13 +1,10 @@
-
-<div class="hero-unit">
-	<% if user_signed_in? %>
-		<h1>You're signed in!</h1>
-	<% else %>
+<% unless user_signed_in? %>
+	<div class="hero-unit">
 		<h1>Welcome to OMR</h1>
 		<p>
 			Visit me at <%= link_to "My Spot", "http://patrickwoods.com" %>
 		</p>
 
 		<p><%= link_to "Signup Now", new_user_registration_path, class: "btn btn-primary btn-large" %></p>		
-	<% end %>
-</div>
+	</div>
+<% end %>
