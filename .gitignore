@@ -25,3 +25,6 @@
 
 # ignore Paperclip uploaded file
 /public/system
+
+# ignore sampleimages
+/sampleimages
