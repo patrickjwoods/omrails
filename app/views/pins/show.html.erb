@@ -2,15 +2,14 @@
 	<div class="span6 offset3">
 		<div class="well">
 			<p>
-			 	<%= image_tag @pin.image %>
-			  <%= @pin.description %>
+				 <%= image_tag @pin.image %>
+				 <%= @pin.description %>
 			</p>
 
 			<% if current_user == @pin.user # only show this to pin owner %>
 			  <%= link_to 'Edit', edit_pin_path(@pin) %> |
 			<% end %>
 			<%= link_to 'Back', pins_path %>
-
 		</div>
 	</div>
 </div>
